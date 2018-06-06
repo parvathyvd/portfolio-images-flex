@@ -1,0 +1,48 @@
+@import 'variables';
+@import 'reset';
+@import 'grid';
+@import 'mixin';
+@import 'components';
+@import 'base';
+
+body{
+    font-size: 1.3rem;
+    margin: 2rem auto;
+    line-height: 2.3rem;
+}
+
+.portfolio{
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+
+}
+.portfolio-item{
+    position: relative;
+    display: flex;
+    
+
+    &::after{
+        content: '';
+        position: absolute;
+        top:0;
+        left:0;
+        background: rgba(0,0,0,0.3);
+        width: 100%;
+        height: 100%;
+
+    }
+}
+
+.portfolio-desc{
+    position: absolute;
+    bottom: 1rem;
+    right: 1rem;
+    color: white;
+    z-index: 3;
+
+    h3{
+        padding-right: 2rem;
+       
+    }
+}
